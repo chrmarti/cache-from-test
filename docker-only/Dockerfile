@@ -3,5 +3,5 @@ FROM ubuntu:latest
 RUN echo HERE
 COPY . /context1
 RUN echo HERE2
-COPY --from=dev_containers_feature_content_source . /context2
+COPY --from=context2 . /context2
 RUN echo install
