@@ -1,6 +1,4 @@
 FROM ubuntu:latest
 RUN echo 1
-COPY . /context1
+COPY /foo.txt /foo.txt
 RUN echo 2
-COPY . /context2
-RUN echo 3
