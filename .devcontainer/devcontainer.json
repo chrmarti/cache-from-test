@@ -1,7 +1,7 @@
 {
     "build": {
         "dockerfile": "Dockerfile",
-        "cacheFrom": "ghcr.io/chuxel/feature-library/images/repo-devcontainer-cache:latest"
+        "cacheFrom": "ghcr.io/chrmarti/cache-from-test/images/repo-devcontainer-cache:latest"
     },
     "customizations": {
         "vscode": {

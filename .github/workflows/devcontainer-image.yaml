@@ -1,8 +1,8 @@
 name: 'Dev container image build'
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 1 * *'
+  # schedule:
+  #   - cron: '0 0 1 * *'
   push:
     branches:
       - 'devcontainer-test'
@@ -29,7 +29,7 @@ jobs:
       - name: Build image
         uses: devcontainers/ci@v0.2
         with:
-          imageName: ghcr.io/chuxel/feature-library/images/repo-devcontainer-cache
+          imageName: ghcr.io/chrmarti/cache-from-test/images/repo-devcontainer-cache
           imageTag: latest
           push: always
           skipContainerUserIdUpdate: true
