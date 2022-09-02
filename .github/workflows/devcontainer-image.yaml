@@ -34,4 +34,5 @@ jobs:
           push: always
           skipContainerUserIdUpdate: true
 
- 
+      - name: Checksums
+        run: find /tmp/vsch-runner/container-features -type f -exec sha256sum {} \;
