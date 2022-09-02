@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-ARG _DEV_CONTAINERS_BASE_IMAGE=placeholder
+# ARG _DEV_CONTAINERS_BASE_IMAGE=placeholder
 FROM ubuntu:latest AS dev_container_auto_added_stage_label
 RUN echo HERE
 
