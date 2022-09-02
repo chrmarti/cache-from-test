@@ -38,6 +38,7 @@ jobs:
 
       - name: Diagnostics
         run: |
+          node --version
           docker buildx version
           docker version
           find /tmp/vsch-runner/container-features -type f -exec sha256sum {} \;
