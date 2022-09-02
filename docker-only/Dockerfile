@@ -1,4 +1,3 @@
-# syntax=docker/dockerfile:1.4
 FROM ubuntu:latest
 RUN echo 1
 COPY . /context1
