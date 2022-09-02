@@ -1,7 +1,9 @@
 # syntax=docker/dockerfile:1.4
-FROM ubuntu:latest
-RUN echo 1
-COPY . /context1
-RUN echo 2
-COPY --from=context2 . /context2
-RUN echo 3
+ARG _DEV_CONTAINERS_BASE_IMAGE=placeholder
+FROM ubuntu:latest AS dev_container_auto_added_stage_label
+RUN echo HERE
+
+FROM $_DEV_CONTAINERS_BASE_IMAGE AS dev_containers_target_stage
+USER root
+COPY --from=dev_containers_feature_content_source . /tmp/build-features/
+RUN echo install
